@@ -6,7 +6,7 @@ static REGEX_USERNAME: &str = r"[[:upper:]]";
 
 pub fn validate_username(username_input: &str) -> bool {
     lazy_static! {
-        static ref RE: Regex = Regex::new(&format!("{}", REGEX_USERNAME)).unwrap();
+        static ref RE: Regex = Regex::new(&format!("^{}$", REGEX_USERNAME)).unwrap();
     }
     RE.is_match(username_input)
 }

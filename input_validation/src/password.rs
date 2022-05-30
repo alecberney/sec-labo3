@@ -55,5 +55,6 @@ mod tests {
         assert!(!validate_password("TEST123456789$")); // Without lower case
         assert!(!validate_password("Testabcdefghi$")); // Without digit
         assert!(!validate_password("Test1234567890")); // Without special char
+        assert!(!validate_password("Test123456789>")); // With a bad special char
     }
 }

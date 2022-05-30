@@ -3,6 +3,8 @@
 /target/
 lab3_client/target/
 lab3_server/target/
+input_validation/target/
+*/target/*
 
 # Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
 # More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
@@ -18,3 +20,5 @@ Cargo.lock
 # .idea
 lab3_server/.idea/*
 lab3_client/.idea/*
+input_validation/.idea/
+lab3_server/.idea/

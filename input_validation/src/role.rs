@@ -6,7 +6,7 @@ static REGEX_ROLE: &str = r"[[:upper:]]";
 
 pub fn validate_role(role_input: &str) -> bool {
     lazy_static! {
-        static ref RE: Regex = Regex::new(&format!("{}", REGEX_ROLE)).unwrap();
+        static ref RE: Regex = Regex::new(&format!("^{}$", REGEX_ROLE)).unwrap();
     }
     RE.is_match(role_input)
 }
