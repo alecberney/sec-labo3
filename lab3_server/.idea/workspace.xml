@@ -5,11 +5,238 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../keys/.rnd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keys/rsa_private_pkcs8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/.rustc_info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/bincode-66ce0b46e7920a9d/dep-lib-bincode" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/bincode-66ce0b46e7920a9d/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/bincode-66ce0b46e7920a9d/lib-bincode" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/bincode-66ce0b46e7920a9d/lib-bincode.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/heck-c866c16be5d940fc/lib-heck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/heck-c866c16be5d940fc/lib-heck.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lab3_client-97e5931dce04a25d/bin-lab3_client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lab3_client-97e5931dce04a25d/bin-lab3_client.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lab3_client-97e5931dce04a25d/dep-bin-lab3_client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lab3_client-97e5931dce04a25d/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lazy_static-eae418c2083836f6/dep-lib-lazy_static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/lazy_static-eae418c2083836f6/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-0ae93e37736881d8/run-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-0ae93e37736881d8/run-build-script-build-script-build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-2f0906855c0c27f8/dep-lib-native-tls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-2f0906855c0c27f8/lib-native-tls.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-f5d193d1ab149169/build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-f5d193d1ab149169/build-script-build-script-build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/native-tls-f5d193d1ab149169/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/proc-macro2-6c3c458438d5c0d2/build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/proc-macro2-6c3c458438d5c0d2/dep-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/proc-macro2-8012e5b3d2ae5865/run-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/proc-macro2-cb9d12d75f7c9814/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/proc-macro2-cb9d12d75f7c9814/lib-proc-macro2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/quote-79d51e8b9b7e4433/dep-lib-quote" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/quote-79d51e8b9b7e4433/lib-quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/read_input-f5c7bcfbcec154a4/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/read_input-f5c7bcfbcec154a4/lib-read_input.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/rustversion-a3785f1caada41da/dep-lib-rustversion" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/rustversion-a3785f1caada41da/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/rustversion-f2be3d16d04b22b9/dep-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/schannel-4f33e4c9a6541fd9/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/schannel-4f33e4c9a6541fd9/lib-schannel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-7c2c926c3a9cca6e/build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-7c2c926c3a9cca6e/build-script-build-script-build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-7c2c926c3a9cca6e/dep-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-8a524e256ebf145c/dep-lib-serde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-8a524e256ebf145c/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-8a524e256ebf145c/lib-serde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde-8a524e256ebf145c/lib-serde.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-42db1d805bb6013d/build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-42db1d805bb6013d/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-b7397244c23b047e/dep-lib-serde_derive" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-b7397244c23b047e/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-b7397244c23b047e/lib-serde_derive" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/serde_derive-b7397244c23b047e/lib-serde_derive.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/strum-c112b062fd141b00/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/strum_macros-229eb12682d67de2/lib-strum_macros.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/syn-44d96df9a5b494da/run-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/syn-acca02ef8489ab14/lib-syn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/syn-f0a1c3316ea412e0/dep-build-script-build-script-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/unicode-xid-a2eb6b9af02624f9/dep-lib-unicode-xid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/unicode-xid-a2eb6b9af02624f9/lib-unicode-xid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/winapi-143ceb241a0e4618/build-script-build-script-build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/winapi-143ceb241a0e4618/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/winapi-cb0e1e02d38576b9/run-build-script-build-script-build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/.fingerprint/winapi-cc20ff0215fc9b33/lib-winapi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/native-tls-0ae93e37736881d8/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/native-tls-0ae93e37736881d8/root-output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/native-tls-f5d193d1ab149169/build_script_build.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/proc-macro2-6c3c458438d5c0d2/build-script-build.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/proc-macro2-6c3c458438d5c0d2/build_script_build-6c3c458438d5c0d2.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/proc-macro2-6c3c458438d5c0d2/build_script_build-6c3c458438d5c0d2.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/proc-macro2-6c3c458438d5c0d2/build_script_build.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/proc-macro2-8012e5b3d2ae5865/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/rustversion-20d52263af7335bf/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/rustversion-20d52263af7335bf/root-output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/rustversion-20d52263af7335bf/stderr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/rustversion-f2be3d16d04b22b9/build-script-build.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/rustversion-f2be3d16d04b22b9/build_script_build-f2be3d16d04b22b9.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde-770f6355c18ce2aa/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde-7c2c926c3a9cca6e/build-script-build.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde-7c2c926c3a9cca6e/build_script_build-7c2c926c3a9cca6e.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde-7c2c926c3a9cca6e/build_script_build.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde_derive-33bc827ae3f05856/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/serde_derive-33bc827ae3f05856/stderr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/syn-44d96df9a5b494da/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/syn-44d96df9a5b494da/root-output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/syn-f0a1c3316ea412e0/build_script_build-f0a1c3316ea412e0.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/syn-f0a1c3316ea412e0/build_script_build-f0a1c3316ea412e0.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/syn-f0a1c3316ea412e0/build_script_build.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/winapi-143ceb241a0e4618/build-script-build.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/build/winapi-cb0e1e02d38576b9/invoked.timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/bincode-66ce0b46e7920a9d.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/lab3_client.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/lab3_client.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/lab3_client.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/lazy_static-eae418c2083836f6.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libbincode-66ce0b46e7920a9d.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libbincode-66ce0b46e7920a9d.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/liblazy_static-eae418c2083836f6.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libproc_macro2-cb9d12d75f7c9814.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libproc_macro2-cb9d12d75f7c9814.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libread_input-f5c7bcfbcec154a4.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libread_input-f5c7bcfbcec154a4.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libschannel-4f33e4c9a6541fd9.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libserde-8a524e256ebf145c.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libserde-8a524e256ebf145c.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libsyn-acca02ef8489ab14.rlib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libsyn-acca02ef8489ab14.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libunicode_xid-a2eb6b9af02624f9.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/libwinapi-cc20ff0215fc9b33.rmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/rustversion-a3785f1caada41da.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/rustversion-a3785f1caada41da.dll.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/rustversion-a3785f1caada41da.dll.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/rustversion-a3785f1caada41da.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde-8a524e256ebf145c.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde_derive-b7397244c23b047e.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde_derive-b7397244c23b047e.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde_derive-b7397244c23b047e.dll.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde_derive-b7397244c23b047e.dll.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/serde_derive-b7397244c23b047e.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/strum-c112b062fd141b00.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/strum_macros-229eb12682d67de2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/strum_macros-229eb12682d67de2.dll.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/strum_macros-229eb12682d67de2.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/syn-acca02ef8489ab14.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/unicode_xid-a2eb6b9af02624f9.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/deps/winapi-cc20ff0215fc9b33.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/12rno5tfbu9zqpsu.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/131e3hgp4fqbudtk.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/13cor86vkiexeogb.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/19kmnevyh5589wfw.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1b4ax4ytatnwaw59.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1cnegi1o52357rk7.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1cvc76ioicmaoqxj.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1dyyhjrqmfpftck3.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1g8bqa6f9i1wswl.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1ie22u069jpzgszk.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1kdu6uwsunoaz73w.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1pa9s1glf5iv4ifl.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1rivxoit26z3ydhb.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1s75vr0761x3qtmt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1ucrj9nhe21cvm89.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1uyorb21pgrtnsv8.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/1ywzswu07thyp4gh.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/20lhwei298myvzp5.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/21c5u9el0gbpv6cm.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/22ophfza3cps7w09.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/25iepiu5yid3g96q.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/284axjntld3xgoju.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2931f3fzt6p268tt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2a3kjodg0xw7x3rg.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2bn19p1bstzz9ylc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2bzne2tp6tyhlust.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2cdkxvamsm4zncoe.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2dxkez56li26bo8c.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2e2luw4dbe48e74l.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2fk1k9tnr002gb43.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2kah2abwf0qp894.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2kwtqnfwh7y8r0bh.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2n6h1h9458scl9bj.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2nuvivw27lpeywa4.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2quwhccwiwedi0o6.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2r223wdx1igv1xy.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2suoxdak7n8nqskf.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2uhumlhqbk53k7o7.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/2zs9peujh292j2p5.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/30u3xal8xw1d6m8n.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/376val9i335gqkep.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/39i14ojn13i7ie07.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3ag765o7mixryhqg.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3fthpbykwiu49grz.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3h7iyn7uxxjbcsly.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3jlgouk1l1i7w2bi.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3lzw91j6iitbghde.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3m5fzkgnh8oj0289.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3qv7qnt5h6gae764.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3rgi01lx4ablzcdh.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3sd3wr3c55wbcwwu.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3tp57z07rb4x8m6b.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3v8mohmy9l39iphs.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3viabacpsxtq3acq.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/3zfj4z2cmzhkkf22.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/42ad0ypwt9s4x2s8.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/45ng3ojziw97914.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/477m4ezuqlotc9wp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/47myhn9aj0fw5y8o.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4ai7o9o80ossjwua.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4exx6kwfwtnmi2on.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4hf2r6rtljb3ucyb.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4hjbrext4y0ikjqy.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4ifjzfe7kqc28kaq.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4ip7ij8rrb0u3tqi.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4ll6oskomga2zlse.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4mbn3ka7hze62asw.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4n3zn8kbf40e32ud.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4nugpblaghwircyc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4qm56uhuqdppq924.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4sanv1buacvh06l5.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4sju4piedmu52r5c.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/4xt1a0rmjevdcsym.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/50cq15x1ewwgx0ih.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/58nobzbxfkfonfen.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5blowhsz3l6l5kk9.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5bmzr6n6eizz5zlk.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5csg32efspaxd38.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5dzm83nduga7p2wg.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5eq0b9ry96ub22qu.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/5fkrr928p6hksy6e.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/693kt5nn5vpwg0j.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/7d7ap1tri7tpoow.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/7w99j1y4xzp0ftv.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/8ful6ymxezrktnl.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/cq9y3iuyrv00zug.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/dep-graph.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/fti9l8z7mpw3v8r.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/g91jn0vj8sn5x17.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/hwrekqkzl3q8m4s.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/kmfymy2lxdzmtsr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/ksqzg6s0ium33br.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/query-cache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/tot1uj20shdgcbv.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/tzerkmeryrxssii.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/w3y6987vpcgav1f.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/wfhfuf5pzmja7f4.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/work-products.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/wsfw3tdfmeae0jw.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/wsmxc4tdcq368ay.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf-h2oh1hvscts/wu2co6exgk2cr5k.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/incremental/lab3_client-3li943isd8wn7/s-ga9mlr5elc-15z76gf.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/lab3_client.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/lab3_client.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/target/debug/lab3_client.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.ron" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,22 +260,44 @@
     </option>
   </component>
   <component name="ProjectId" id="29t60OiLJecELBXlsMwNFOgJ7O1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo3/lab3_server",
+    "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
+      <option name="command" value="run" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
@@ -60,7 +309,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653919811088</updated>
-      <workItem from="1653919812580" duration="2440000" />
+      <workItem from="1653919812580" duration="4548000" />
     </task>
     <servers />
   </component>
@@ -77,5 +326,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

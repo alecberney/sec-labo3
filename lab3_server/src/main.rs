@@ -22,8 +22,9 @@ use std::sync::Arc;
 use std::thread;
 
 const SERVER_IP: &str = "localhost:4444";
-const KEY_PATH: &str = "key";
-const CERT_PATH: &str = "cert";
+//const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
+const KEY_PATH: &str = "../keys/rsa_private.pem";
+const CERT_PATH: &str = "../keys/rsa_cert.pem";
 
 lazy_static! {
     static ref MOTIVATIONAL_QUOTES: Vec<&'static str> = vec![
