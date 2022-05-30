@@ -12,7 +12,7 @@ pub enum UserRole {
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct UserAccount {
     username: String,
-    password: String,
+    password: String, // TODO store hash of pwd and not pwd
     phone_number: String,
     role: UserRole,
 }

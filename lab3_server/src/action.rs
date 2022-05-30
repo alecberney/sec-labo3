@@ -57,6 +57,9 @@ impl Action {
     pub fn change_own_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         let phone = u.conn().receive::<String>()?;
 
+        // TODO validate data
+
+        // TODO move access validation in an other part
         // Check permissions
         let res = if u.is_anonymous() {
             Err("Anonymous not allowed to change phone")
@@ -76,6 +79,9 @@ impl Action {
         let phone = u.conn().receive::<String>()?;
         let target_user = Database::get(&username)?;
 
+        // TODO validate data
+
+        // TODO move access validation in an other part
         // Check permissions
         let res = if u.is_anonymous() {
             Err("Anonymous not allowed to change phone numbers")
@@ -100,6 +106,11 @@ impl Action {
         let phone = u.conn().receive::<String>()?;
         let role = u.conn().receive::<UserRole>()?;
 
+        // TODO validate data
+
+        // TODO store hash of pwd and not pwd
+
+        // TODO move access validation in an other part
         let res = if u.is_anonymous() {
             Err("Anonymous not allowed to add users")
         } else if let UserRole::HR = u.user_account()?.role() {
@@ -120,6 +131,10 @@ impl Action {
         // Receive data
         let username = u.conn().receive::<String>()?;
         let password = u.conn().receive::<String>()?;
+
+        // TODO validate data
+
+        // TODO compare hash of pwd and not pwd
 
         let res = if !u.is_anonymous() {
             Err("You are already logged in")
@@ -143,6 +158,7 @@ impl Action {
     pub fn logout(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         let res: Result<(), &str>;
 
+        // TODO move access validation in an other part
         // Check permissions
         res = if u.is_anonymous() {
             Err("You are not logged in")
@@ -154,6 +170,11 @@ impl Action {
         u.conn.send(&res)
     }
 }
+
+// TODO
+// The access controls are currently split into multiple functions which makes it hard to maintain.
+// Try to improve the access controls with what you saw in the courses
+// TODO: move in an other file
 
 /// Used to represent a connected user for the actions
 pub struct ConnectedUser {

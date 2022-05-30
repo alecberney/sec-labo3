@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab3_client/.idea/lab3_client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3_client/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3_client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/lab3_server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653919811088</updated>
-      <workItem from="1653919812580" duration="834000" />
+      <workItem from="1653919812580" duration="2440000" />
     </task>
     <servers />
   </component>
