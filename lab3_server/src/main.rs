@@ -8,6 +8,7 @@ mod connection;
 mod database;
 mod user;
 mod hashing_tools;
+mod messages;
 
 use crate::action::{Action, ConnectedUser};
 use crate::user::UserRole;

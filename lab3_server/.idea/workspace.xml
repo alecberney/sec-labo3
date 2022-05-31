@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/messages.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../input_validation/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/src/username.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,8 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo3/input_validation",
     "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "settings.editor.selected.configurable": "language.rust.cargo.check"
   }
 }]]></component>
   <component name="RunManager">
@@ -89,7 +95,7 @@
       <updated>1653919811088</updated>
       <workItem from="1653919812580" duration="4548000" />
       <workItem from="1653933899773" duration="1426000" />
-      <workItem from="1653977616572" duration="664000" />
+      <workItem from="1653977616572" duration="1678000" />
     </task>
     <servers />
   </component>
@@ -109,5 +115,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -7,9 +7,14 @@
 use crate::connection::Connection;
 use crate::database::Database;
 use crate::user::{UserAccount, UserRole};
+use crate::messages::*;
+use crate::hashing_tools::*;
 use serde::{Deserialize, Serialize};
 use std::error::Error;
 use strum_macros::{EnumIter, EnumString};
+use input_validation::phone_number::validate_phone_number;
+use input_validation::password::validate_password;
+use input_validation::username::validate_username;
 
 #[derive(Serialize, Deserialize, Debug, EnumString, EnumIter)]
 pub enum Action {
@@ -57,11 +62,17 @@ impl Action {
     pub fn change_own_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         let phone = u.conn().receive::<String>()?;
 
-        // TODO validate data
+        let res;
+
+        // Validate data
+        if !validate_phone_number(&phone) {
+            res = Err(INVALID_PHONE_NUMBER);
+            return u.conn().send(&res);
+        }
 
         // TODO move access validation in an other part
         // Check permissions
-        let res = if u.is_anonymous() {
+        res = if u.is_anonymous() {
             Err("Anonymous not allowed to change phone")
         } else {
             let mut user = u.user_account()?;
@@ -79,11 +90,21 @@ impl Action {
         let phone = u.conn().receive::<String>()?;
         let target_user = Database::get(&username)?;
 
-        // TODO validate data
+        let res;
+
+        // Validate data
+        if !validate_username(&username) {
+            res = Err(INVALID_USERNAME);
+            return u.conn().send(&res);
+        }
+        if !validate_phone_number(&phone) {
+            res = Err(INVALID_PHONE_NUMBER);
+            return u.conn().send(&res);
+        }
 
         // TODO move access validation in an other part
         // Check permissions
-        let res = if u.is_anonymous() {
+        res = if u.is_anonymous() {
             Err("Anonymous not allowed to change phone numbers")
         } else if let UserRole::StandardUser = u.user_account()?.role() {
             Err("Standard users not allowed to change other phone numbers")
@@ -106,12 +127,26 @@ impl Action {
         let phone = u.conn().receive::<String>()?;
         let role = u.conn().receive::<UserRole>()?;
 
-        // TODO validate data
+        let res;
+
+        // Validate data
+        if !validate_username(&username) {
+            res = Err(INVALID_USERNAME);
+            return u.conn().send(&res);
+        }
+        if !validate_password(&password) {
+            res = Err(INVALID_PASSWORD);
+            return u.conn().send(&res);
+        }
+        if !validate_phone_number(&phone) {
+            res = Err(INVALID_PHONE_NUMBER);
+            return u.conn().send(&res);
+        }
 
         // TODO store hash of pwd and not pwd
 
         // TODO move access validation in an other part
-        let res = if u.is_anonymous() {
+        res = if u.is_anonymous() {
             Err("Anonymous not allowed to add users")
         } else if let UserRole::HR = u.user_account()?.role() {
             if Database::get(&username)?.is_some() {
@@ -132,11 +167,21 @@ impl Action {
         let username = u.conn().receive::<String>()?;
         let password = u.conn().receive::<String>()?;
 
-        // TODO validate data
+        let res;
+
+        // Validate data
+        if !validate_username(&username) {
+            res = Err(INVALID_USERNAME);
+            return u.conn().send(&res);
+        }
+        if !validate_password(&password) {
+            res = Err(INVALID_PASSWORD);
+            return u.conn().send(&res);
+        }
 
         // TODO compare hash of pwd and not pwd
 
-        let res = if !u.is_anonymous() {
+        res = if !u.is_anonymous() {
             Err("You are already logged in")
         } else {
             let user = Database::get(&username)?;

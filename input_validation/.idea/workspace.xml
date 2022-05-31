@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eaf2673d-1f3c-4d35-b98e-a43326551fb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/username.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_server/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_server/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/action.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +51,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo1/lab01_2022_input_validation",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
+    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo3/input_validation",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "settings.editor.selected.configurable": "language.rust.cargo.check"
   }
 }]]></component>
   <component name="RunManager" selected="Cargo.Test username::tests::validate_username_length">
@@ -159,7 +161,8 @@
       <updated>1653933722306</updated>
       <workItem from="1653933725090" duration="698000" />
       <workItem from="1653934556905" duration="1844000" />
-      <workItem from="1653977687133" duration="1795000" />
+      <workItem from="1653977687133" duration="2558000" />
+      <workItem from="1653980357891" duration="49000" />
     </task>
     <servers />
   </component>
@@ -176,5 +179,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
