@@ -5,71 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaf2673d-1f3c-4d35-b98e-a43326551fb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/CACHEDIR.TAG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.cargo-lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/aho-corasick-70b7ce3ec4cc1ae8/dep-lib-aho_corasick" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/aho-corasick-70b7ce3ec4cc1ae8/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/aho-corasick-70b7ce3ec4cc1ae8/lib-aho_corasick" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/aho-corasick-70b7ce3ec4cc1ae8/lib-aho_corasick.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/input_validation-a4ded0628aa920c3/dep-test-lib-input_validation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/input_validation-a4ded0628aa920c3/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/input_validation-a4ded0628aa920c3/test-lib-input_validation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/input_validation-a4ded0628aa920c3/test-lib-input_validation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/lazy_static-eae418c2083836f6/dep-lib-lazy_static" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/lazy_static-eae418c2083836f6/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/lazy_static-eae418c2083836f6/lib-lazy_static" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/lazy_static-eae418c2083836f6/lib-lazy_static.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-028805bfd8b240b8/dep-lib-memchr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-028805bfd8b240b8/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-028805bfd8b240b8/lib-memchr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-028805bfd8b240b8/lib-memchr.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-183cfb2771c628d5/build-script-build-script-build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-183cfb2771c628d5/build-script-build-script-build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-183cfb2771c628d5/dep-build-script-build-script-build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-183cfb2771c628d5/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-7d35d63a17e06db1/run-build-script-build-script-build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/memchr-7d35d63a17e06db1/run-build-script-build-script-build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-9cead6a777f356f9/dep-lib-regex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-9cead6a777f356f9/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-9cead6a777f356f9/lib-regex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-9cead6a777f356f9/lib-regex.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-syntax-f5ce82d0291156ae/dep-lib-regex-syntax" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-syntax-f5ce82d0291156ae/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-syntax-f5ce82d0291156ae/lib-regex-syntax" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/.fingerprint/regex-syntax-f5ce82d0291156ae/lib-regex-syntax.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-183cfb2771c628d5/build-script-build.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-183cfb2771c628d5/build_script_build-183cfb2771c628d5.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-183cfb2771c628d5/build_script_build-183cfb2771c628d5.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-183cfb2771c628d5/build_script_build-183cfb2771c628d5.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-183cfb2771c628d5/build_script_build.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-7d35d63a17e06db1/invoked.timestamp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-7d35d63a17e06db1/output" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-7d35d63a17e06db1/root-output" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/build/memchr-7d35d63a17e06db1/stderr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/aho_corasick-70b7ce3ec4cc1ae8.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/input_validation-a4ded0628aa920c3.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/input_validation-a4ded0628aa920c3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/input_validation-a4ded0628aa920c3.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/lazy_static-eae418c2083836f6.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libaho_corasick-70b7ce3ec4cc1ae8.rlib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libaho_corasick-70b7ce3ec4cc1ae8.rmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/liblazy_static-eae418c2083836f6.rlib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/liblazy_static-eae418c2083836f6.rmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libmemchr-028805bfd8b240b8.rlib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libmemchr-028805bfd8b240b8.rmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libregex-9cead6a777f356f9.rlib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libregex-9cead6a777f356f9.rmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libregex_syntax-f5ce82d0291156ae.rlib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/libregex_syntax-f5ce82d0291156ae.rmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/memchr-028805bfd8b240b8.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/regex-9cead6a777f356f9.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/debug/deps/regex_syntax-f5ce82d0291156ae.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/password.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/password.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/phone_number.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/phone_number.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/role.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/username.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,13 +50,29 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Exercices/Ex 3/ex_3",
+    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo1/lab01_2022_input_validation",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Cargo.Test phone_number::tests::validate_phone_number_test">
+  <component name="RunManager" selected="Cargo.Test phone_number::tests">
     <configuration name="Test password::tests::validate_password_characters" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package input_validation --lib password::tests::validate_password_characters -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test phone_number::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package input_validation --lib phone_number::tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -152,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test phone_number::tests" />
         <item itemvalue="Cargo.Test phone_number::tests::validate_phone_number_test" />
         <item itemvalue="Cargo.Test password::tests::validate_password_characters" />
       </list>
@@ -170,7 +124,8 @@
       <option name="presentableId" value="Default" />
       <updated>1653933722306</updated>
       <workItem from="1653933725090" duration="698000" />
-      <workItem from="1653934556905" duration="1642000" />
+      <workItem from="1653934556905" duration="1844000" />
+      <workItem from="1653977687133" duration="944000" />
     </task>
     <servers />
   </component>
