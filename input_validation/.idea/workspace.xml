@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eaf2673d-1f3c-4d35-b98e-a43326551fb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/phone_number.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/phone_number.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/username.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +54,9 @@
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Cargo.Test phone_number::tests">
-    <configuration name="Test password::tests::validate_password_characters" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package input_validation --lib password::tests::validate_password_characters -- --exact" />
+  <component name="RunManager" selected="Cargo.Test username::tests::validate_username_length">
+    <configuration name="Test password::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package input_validation --lib password::tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -103,11 +103,45 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test username::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package input_validation --lib username::tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test username::tests::validate_username_length" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package input_validation --lib username::tests::validate_username_length -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test username::tests::validate_username_length" />
+        <item itemvalue="Cargo.Test username::tests" />
+        <item itemvalue="Cargo.Test password::tests" />
         <item itemvalue="Cargo.Test phone_number::tests" />
         <item itemvalue="Cargo.Test phone_number::tests::validate_phone_number_test" />
-        <item itemvalue="Cargo.Test password::tests::validate_password_characters" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +159,7 @@
       <updated>1653933722306</updated>
       <workItem from="1653933725090" duration="698000" />
       <workItem from="1653934556905" duration="1844000" />
-      <workItem from="1653977687133" duration="944000" />
+      <workItem from="1653977687133" duration="1795000" />
     </task>
     <servers />
   </component>
