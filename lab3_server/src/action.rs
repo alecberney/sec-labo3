@@ -73,7 +73,7 @@ impl Action {
         // TODO move access validation in an other part
         // Check permissions
         res = if u.is_anonymous() {
-            Err("Anonymous not allowed to change phone")
+            Err(ANONYMOUS_PHONE)
         } else {
             let mut user = u.user_account()?;
             user.set_phone_number(phone);
@@ -105,11 +105,11 @@ impl Action {
         // TODO move access validation in an other part
         // Check permissions
         res = if u.is_anonymous() {
-            Err("Anonymous not allowed to change phone numbers")
+            Err(ANONYMOUS_PHONE)
         } else if let UserRole::StandardUser = u.user_account()?.role() {
-            Err("Standard users not allowed to change other phone numbers")
+            Err(STANDARD_OTHER_PHONE)
         } else if target_user.is_none() {
-            Err("Target user not found")
+            Err(USER_NOT_FOUND)
         } else {
             let mut target_user = target_user.unwrap();
             target_user.set_phone_number(phone);
@@ -143,20 +143,22 @@ impl Action {
             return u.conn().send(&res);
         }
 
-        // TODO store hash of pwd and not pwd
+        // Hash password with a random salt
+        let (salt, hash_password) = new_hash_password(&password);
 
         // TODO move access validation in an other part
+        // Check permissions
         res = if u.is_anonymous() {
-            Err("Anonymous not allowed to add users")
+            Err(ANONYMOUS_ADD_USER)
         } else if let UserRole::HR = u.user_account()?.role() {
             if Database::get(&username)?.is_some() {
-                Err("User already exists")
+                Err(USER_EXISTS)
             } else {
-                let user = UserAccount::new(username, password, phone, role);
+                let user = UserAccount::new(username, hash_password, salt, phone, role);
                 Ok(Database::insert(&user)?)
             }
         } else {
-            Err("Only HR is allowed to add users")
+            Err(ONLY_HR_ADD_USER)
         };
 
         u.conn.send(&res)
@@ -180,20 +182,21 @@ impl Action {
         }
 
         // TODO compare hash of pwd and not pwd
-
+        // Check permissions
         res = if !u.is_anonymous() {
-            Err("You are already logged in")
+            Err(ALREADY_LOGGED_IN)
         } else {
             let user = Database::get(&username)?;
             if let Some(user) = user {
-                if user.password() == password {
+                // Compare hash of passwords
+                if user.hash_password() == &hash_argon2(&password, user.salt()) {
                     u.set_username(&username);
                     Ok(())
                 } else {
-                    Err("Invalid password")
+                    Err(INVALID_PASSWORD)
                 }
             } else {
-                Err("User does not exist")
+                Err(USER_DOES_NOT_EXIST)
             }
         };
 
@@ -206,7 +209,7 @@ impl Action {
         // TODO move access validation in an other part
         // Check permissions
         res = if u.is_anonymous() {
-            Err("You are not logged in")
+            Err(NOT_LOGGED_IN)
         } else {
             u.logout();
             Ok(())

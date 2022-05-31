@@ -3,6 +3,7 @@
 /// Tasks todo: - Log stuff whenever required
 ///             - Potential improvements
 use crate::user::{UserAccount, UserRole};
+use crate::hashing_tools::new_hash_password;
 use lazy_static::lazy_static;
 use rustbreak::{deser::Ron, FileDatabase};
 use serde::{Deserialize, Serialize};
@@ -43,16 +44,22 @@ impl Default for Database {
             data: HashMap::new(),
         };
 
+        let (default_salt1, default_hash_pwd1) = new_hash_password("default_pass");
+        let default_salt2 = default_salt1.clone();
+        let default_hash_pwd2 = default_hash_pwd1.clone();
+
         let u1 = UserAccount::new(
             "default_user".to_string(),
-            "default_pass".to_string(),
+            default_hash_pwd1,
+            default_salt1,
             "0784539872".to_string(),
             UserRole::StandardUser,
         );
 
         let u2 = UserAccount::new(
             "default_hr".to_string(),
-            "default_pass".to_string(),
+            default_hash_pwd2,
+            default_salt2,
             "0793175289".to_string(),
             UserRole::HR,
         );

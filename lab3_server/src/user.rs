@@ -12,16 +12,18 @@ pub enum UserRole {
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct UserAccount {
     username: String,
-    password: String, // TODO store hash of pwd and not pwd
+    hash_password: String,
+    salt: [u8;16],
     phone_number: String,
     role: UserRole,
 }
 
 impl UserAccount {
-    pub fn new(username: String, password: String, phone_number: String, role: UserRole) -> Self {
+    pub fn new(username: String, hash_password: String, salt: [u8;16], phone_number: String, role: UserRole) -> Self {
         Self {
             username,
-            password,
+            hash_password,
+            salt,
             phone_number,
             role,
         }
@@ -31,8 +33,12 @@ impl UserAccount {
         &self.username
     }
 
-    pub fn password(&self) -> &str {
-        &self.password
+    pub fn hash_password(&self) -> &str {
+        &self.hash_password
+    }
+
+    pub fn salt(&self) -> &[u8;16] {
+        &self.salt
     }
 
     pub fn role(&self) -> &UserRole {
