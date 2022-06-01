@@ -10,8 +10,10 @@ mod user;
 mod hashing_tools;
 mod messages;
 mod acces_control;
+mod user_connected;
 
-use crate::action::{Action, ConnectedUser};
+use crate::action::Action;
+use crate::user_connected::ConnectedUser;
 use crate::user::UserRole;
 use connection::Connection;
 use lazy_static::lazy_static;
