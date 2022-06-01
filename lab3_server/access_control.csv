@@ -1,0 +1,19 @@
+g, anonymous
+g, normal
+g, hr
+
+g2, show_users, all
+g2, change_own_phone, logged
+g2, change_phone, admin
+g2, add_user, admin
+g2, login, un_logged
+g2, logout, logged
+g2, exit, all
+
+p, anonymous, all
+p, anonymous, un_logged
+p, normal, all
+p, normal, logged
+p, hr, all
+p, hr, logged
+p, hr, admin

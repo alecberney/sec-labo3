@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access_control.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access_control.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/acces_control.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashing_tools.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashing_tools.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +56,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo3/lab3_server",
+    "last_opened_file_path": "A:/HEIG/Semestre 6/SEC/Labos/sec-labo2/server",
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "settings.editor.selected.configurable": "language.rust.cargo.check"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\HEIG\Semestre 6\SEC\Labos\sec-labo3\lab3_server" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="command" value="run" />
@@ -73,6 +76,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -83,6 +87,7 @@
     </configuration>
   </component>
   <component name="RustProjectSettings">
+    <option name="runExternalLinterOnTheFly" value="true" />
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
     <option name="version" value="2" />
   </component>
@@ -96,7 +101,10 @@
       <updated>1653919811088</updated>
       <workItem from="1653919812580" duration="4548000" />
       <workItem from="1653933899773" duration="1426000" />
-      <workItem from="1653977616572" duration="5041000" />
+      <workItem from="1653977616572" duration="7129000" />
+      <workItem from="1654069994480" duration="283000" />
+      <workItem from="1654070297253" duration="2057000" />
+      <workItem from="1654082399588" duration="3530000" />
     </task>
     <servers />
   </component>
