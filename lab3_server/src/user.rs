@@ -1,6 +1,6 @@
 /// This file is used to store and retrieve user accounts from the database
 ///
-/// Tasks todo: - Potential improvements
+/// Tasks todo: - Potential improvements -> done
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, Debug)]

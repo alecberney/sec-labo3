@@ -22,3 +22,6 @@ lab3_server/.idea/*
 lab3_client/.idea/*
 input_validation/.idea/
 lab3_server/.idea/
+
+# Other files
+lab3_server/old*

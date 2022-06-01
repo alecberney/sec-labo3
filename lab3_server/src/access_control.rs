@@ -1,6 +1,7 @@
 use casbin::CoreApi;
 use casbin::prelude::Enforcer;
 use std::error::Error;
+use log::warn;
 use crate::{Action, ConnectedUser, UserRole};
 
 // A Role-Based Access Control (RBAC) system will be implemented
@@ -27,7 +28,10 @@ pub async fn can_perform_action(action: Action, user: &mut ConnectedUser) -> Res
     )) {
         Ok(true) => Ok(true),
         Ok(false) => Ok(false),
-        Err(_) => Err("Error while checking access control".into()),
+        Err(_) => {
+            warn!("Access control error");
+            Err("Error while checking access control".into())
+        },
     }
 }
 

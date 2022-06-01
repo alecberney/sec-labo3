@@ -9,11 +9,12 @@ mod database;
 mod user;
 mod hashing_tools;
 mod messages;
-mod acces_control;
+mod access_control;
 mod user_connected;
 
 use crate::action::Action;
 use crate::user_connected::ConnectedUser;
+//use crate::action::{Action, ConnectedUser};
 use crate::user::UserRole;
 use connection::Connection;
 use lazy_static::lazy_static;
@@ -25,6 +26,8 @@ use std::io::Read;
 use std::net::TcpListener;
 use std::sync::Arc;
 use std::thread;
+use simplelog::{ColorChoice, Config, LevelFilter, TerminalMode, TermLogger};
+use log::{debug, info, trace, warn};
 
 const SERVER_IP: &str = "localhost:4444";
 //const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
@@ -45,6 +48,8 @@ lazy_static! {
 
 // Handles client connection by sending a banner and then waiting for a client action
 fn handle_client(conn: Connection) -> Result<(), Box<dyn Error>> {
+    trace!("Handling new client");
+
     let mut u = ConnectedUser::anonymous(conn); // Anonymous user at first
     loop {
         let mut banner = "Welcome to RESIGN (hR onlinE uSer dIrectory manaGemeNt)!".to_string();
@@ -72,6 +77,7 @@ fn load_server_identity(cert_file: &str, key_file: &str) -> Identity {
     let mut cert = Vec::new();
     let mut key = Vec::new();
 
+    // No log cause the server crashes if it doesn't work
     let mut cert_file = File::open(cert_file).expect("Certificate file not found");
     let mut key_file = File::open(key_file).expect("Key file not found");
 
@@ -95,33 +101,51 @@ fn tls_config(cert_file: &str, key_file: &str) -> Arc<TlsAcceptor> {
 }
 
 fn main() {
+    // Initialize logging policy
+    TermLogger::init(
+        LevelFilter::Trace, //Warn
+        Config::default(),
+        TerminalMode::Stderr,
+        ColorChoice::Auto
+    ).unwrap();
+
     // Start TLS server and wait for new connections
     let acceptor = tls_config(CERT_PATH, KEY_PATH);
     let listener = TcpListener::bind(SERVER_IP).unwrap();
-    println!("Server started");
+    //println!("Server started");
+    info!("Server started");
 
     // Handles new connection, negotiate TLS and call handle_client
     for stream in listener.incoming() {
+        debug!("New connection");
         match stream {
             Ok(stream) => {
                 let acceptor = acceptor.clone();
+                debug!("acceptor");
                 thread::spawn(move || {
+                    debug!("tls handshake");
                     // TLS handshake on top of the connection using the TlsAcceptor
                     let stream = acceptor.accept(stream);
                     if stream.is_err() {
-                        println!("TLS handshake failed with error: {}", stream.err().unwrap());
+                        //println!("TLS handshake failed with error: {}", stream.err().unwrap());
+                        warn!("TLS handshake failed with error: {}", stream.err().unwrap());
                     } else {
-                        println!("TLS client connection accepted");
+                        //println!("TLS client connection accepted");
+                        info!("TLS client connection accepted");
                         if let Err(e) = handle_client(Connection::new(stream.unwrap())) {
-                            eprintln!("Connection closed: {}", e);
+                            //eprintln!("Connection closed: {}", e);
+                            warn!("Connection closed: {}", e);
                             return;
                         }
                     }
                 });
             }
             Err(e) => {
-                println!("Connection failed with error: {}", e);
+                //println!("Connection failed with error: {}", e);
+                warn!("Connection failed with error: {}", e);
             }
         }
     }
+
+    info!("Server stopped");
 }

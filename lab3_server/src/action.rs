@@ -1,21 +1,23 @@
 /// This file is used to execute the various actions submitted by the clients
 ///
-/// Tasks todo: - Improve the authentication & access controls
-///             - Input/output validation
+/// Tasks todo: - Improve the authentication & access controls -> done
+///             - Input/output validation -> input done
 ///             - Log stuff whenever required
 ///             - Potential improvements
 use crate::database::Database;
 use crate::user::{UserAccount, UserRole};
+//use crate::Connection;
 use crate::user_connected::ConnectedUser;
 use crate::messages::*;
 use crate::hashing_tools::*;
+use crate::access_control::can_perform_action;
 use serde::{Deserialize, Serialize};
 use std::error::Error;
 use strum_macros::{EnumIter, EnumString};
+use log::{info, trace, warn};
 use input_validation::phone_number::validate_phone_number;
 use input_validation::password::validate_password;
 use input_validation::username::validate_username;
-use crate::acces_control::can_perform_action;
 
 #[derive(Serialize, Deserialize, Debug, EnumString, EnumIter)]
 pub enum Action {
@@ -41,6 +43,8 @@ pub enum Action {
 ///     3. Send a result
 impl Action {
     pub fn perform(&self, u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Performing action: {:?}", self);
+
         let res = match self {
             Action::ShowUsers => Action::show_users(u),
             Action::ChangeOwnPhone => Action::change_own_phone(u),
@@ -48,19 +52,27 @@ impl Action {
             Action::AddUser => Action::add_user(u),
             Action::Login => Action::login(u),
             Action::Logout => Action::logout(u),
-            Action::Exit => Err("Client disconnected")?,
+            Action::Exit => {
+                info!("Client disconnected");
+                Err("Client disconnected")?
+            },
         };
 
         res
     }
 
     pub fn show_users(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Show users");
+
+        // TODO add check permissions
         let users = Database::values()?;
         let res: Result<Vec<UserAccount>, &str> = Ok(users);
         u.conn().send(&res)
     }
 
     pub fn change_own_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Change own phone number");
+
         let phone = u.conn().receive::<String>()?;
 
         let res;
@@ -68,6 +80,7 @@ impl Action {
         // Validate data
         if !validate_phone_number(&phone) {
             res = Err(INVALID_PHONE_NUMBER);
+            warn!("Invalid phone number: {}", phone);
             return u.conn().send(&res);
         }
 
@@ -77,8 +90,10 @@ impl Action {
             let mut user = u.user_account()?;
             user.set_phone_number(phone);
             Database::insert(&user)?;
+            info!("Phone number changed");
             Ok(())
         } else {
+            warn!("Anonymous user tried to change own phone number");
             Err(PERMISSION_DENIED)
         };
 
@@ -95,6 +110,8 @@ impl Action {
     }
 
     pub fn change_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Change phone number");
+
         // Receive data
         let username = u.conn().receive::<String>()?;
         let phone = u.conn().receive::<String>()?;
@@ -105,25 +122,30 @@ impl Action {
         // Validate data
         if !validate_username(&username) {
             res = Err(INVALID_USERNAME);
+            warn!("Invalid username: {}", username);
             return u.conn().send(&res);
         }
         if !validate_phone_number(&phone) {
             res = Err(INVALID_PHONE_NUMBER);
+            warn!("Invalid phone number: {}", phone);
             return u.conn().send(&res);
         }
 
         // Check permissions
         res = if can_perform_action(Action::ChangePhone, u)? {
             if target_user.is_none() {
+                warn!("User not found: {}", username);
                 Err(USER_NOT_FOUND)
             } else {
                 // Update phone number from target user
                 let mut target_user = target_user.unwrap();
                 target_user.set_phone_number(phone);
                 Database::insert(&target_user)?;
+                info!("Phone number changed for user: {}", username);
                 Ok(())
             }
         } else {
+            warn!("User {} tried to change phone number of user: {}", u.username() ,username);
             Err(PERMISSION_DENIED)
         };
 
@@ -144,6 +166,8 @@ impl Action {
     }
 
     pub fn add_user(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Adding user");
+
         // Receive data
         let username = u.conn().receive::<String>()?;
         let password = u.conn().receive::<String>()?;
@@ -155,14 +179,17 @@ impl Action {
         // Validate data
         if !validate_username(&username) {
             res = Err(INVALID_USERNAME);
+            warn!("Invalid username: {}", username);
             return u.conn().send(&res);
         }
         if !validate_password(&password) {
             res = Err(INVALID_PASSWORD);
+            warn!("Invalid password: {}", password);
             return u.conn().send(&res);
         }
         if !validate_phone_number(&phone) {
             res = Err(INVALID_PHONE_NUMBER);
+            warn!("Invalid phone number: {}", phone);
             return u.conn().send(&res);
         }
 
@@ -172,12 +199,15 @@ impl Action {
         // Check permissions
         res = if can_perform_action(Action::AddUser, u)? {
             if Database::get(&username)?.is_some() {
+                warn!("User already exists: {}", username);
                 Err(USER_EXISTS)
             } else {
                 let user = UserAccount::new(username, hash_password, salt, phone, role);
+                info!("User added");
                 Ok(Database::insert(&user)?)
             }
         } else {
+            warn!("User {} tried to add user {}", u.username(), username);
             Err(PERMISSION_DENIED)
         };
 
@@ -199,6 +229,8 @@ impl Action {
     }
 
     pub fn login(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Login");
+
         // Receive data
         let username = u.conn().receive::<String>()?;
         let password = u.conn().receive::<String>()?;
@@ -208,10 +240,12 @@ impl Action {
         // Validate data
         if !validate_username(&username) {
             res = Err(INVALID_USERNAME);
+            warn!("Invalid username: {}", username);
             return u.conn().send(&res);
         }
         if !validate_password(&password) {
             res = Err(INVALID_PASSWORD);
+            warn!("Invalid password: {}", password);
             return u.conn().send(&res);
         }
 
@@ -222,14 +256,18 @@ impl Action {
                 // Compare hash of passwords
                 if user.hash_password() == &hash_argon2(&password, user.salt()) {
                     u.set_username(&username);
+                    info!("User {} logged in", username);
                     Ok(())
                 } else {
+                    warn!("Invalid password for user {}", username);
                     Err(INVALID_PASSWORD)
                 }
             } else {
+                warn!("User not found: {}", username);
                 Err(USER_DOES_NOT_EXIST)
             }
         } else {
+            warn!("User {} tried to login", u.username());
             Err(PERMISSION_DENIED)
         };
 
@@ -255,13 +293,17 @@ impl Action {
     }
 
     pub fn logout(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
+        trace!("Logout");
+
         let res: Result<(), &str>;
 
         res = if can_perform_action(Action::Logout, u)? {
             // Logout
             u.logout();
+            info!("User {} logged out", u.username());
             Ok(())
         } else {
+            warn!("Anonymous tried to logout");
             Err(PERMISSION_DENIED)
         };
 

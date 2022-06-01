@@ -9,6 +9,7 @@ use rustbreak::{deser::Ron, FileDatabase};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::error::Error;
+use log::trace;
 
 lazy_static! {
     static ref DB: FileDatabase<Database, Ron> =
@@ -43,6 +44,8 @@ impl Default for Database {
         let mut db = Database {
             data: HashMap::new(),
         };
+
+        trace!("Creating base data for database");
 
         let (default_salt1, default_hash_pwd1) = new_hash_password("default_pass");
         let default_salt2 = default_salt1.clone();
