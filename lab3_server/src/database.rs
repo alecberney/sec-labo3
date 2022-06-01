@@ -9,19 +9,11 @@ use rustbreak::{deser::Ron, FileDatabase};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::error::Error;
-use log::{info, error};
+use log::info;
 
 lazy_static! {
     static ref DB: FileDatabase<Database, Ron> =
-        //FileDatabase::load_from_path_or_default("db.ron").unwrap();
-        // Added by me:
-        match FileDatabase::load_from_path_or_default("db.ron") {
-            Ok(db) => db,
-            Err(e) => {
-                panic!("Error loading database");
-                //FileDatabase::default()
-            }
-        };
+        FileDatabase::load_from_path_or_default("db.ron").unwrap();
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
@@ -45,6 +37,11 @@ impl Database {
     pub fn values() -> Result<Vec<UserAccount>, Box<dyn Error>> {
         Ok(DB.borrow_data()?.data.values().cloned().collect())
     }
+
+    pub fn init() {
+        // Do nothing but awake the lazy_static
+        let _ = &DB.borrow_data();
+    }
 }
 
 impl Default for Database {
@@ -55,6 +52,7 @@ impl Default for Database {
 
         info!("Creating starting data for database");
 
+        // TODO: secret in env file
         let (default_salt1, default_hash_pwd1) = new_hash_password("default_pass");
         let default_salt2 = default_salt1.clone();
         let default_hash_pwd2 = default_hash_pwd1.clone();

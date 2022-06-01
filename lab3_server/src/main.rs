@@ -14,7 +14,6 @@ mod user_connected;
 
 use crate::action::Action;
 use crate::user_connected::ConnectedUser;
-//use crate::action::{Action, ConnectedUser};
 use crate::user::UserRole;
 use crate::database::Database;
 use connection::Connection;
@@ -30,6 +29,7 @@ use std::thread;
 use simplelog::{ColorChoice, Config, LevelFilter, TerminalMode, TermLogger};
 use log::{debug, info, trace, warn};
 
+// TODO: secret in env file
 const SERVER_IP: &str = "localhost:4444";
 //const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
 const KEY_PATH: &str = "./keys/rsa_private.pem";
@@ -110,8 +110,8 @@ fn main() {
         ColorChoice::Auto
     ).unwrap();
 
-    // Init DB
-    Database::default(); // Added by me
+    // To add default account in DB
+    Database::init();
 
     // Start TLS server and wait for new connections
     let acceptor = tls_config(CERT_PATH, KEY_PATH);
@@ -121,11 +121,10 @@ fn main() {
 
     // Handles new connection, negotiate TLS and call handle_client
     for stream in listener.incoming() {
-        debug!("New connection");
+        trace!("New connection");
         match stream {
             Ok(stream) => {
                 let acceptor = acceptor.clone();
-                debug!("acceptor");
                 thread::spawn(move || {
                     debug!("tls handshake");
                     // TLS handshake on top of the connection using the TlsAcceptor

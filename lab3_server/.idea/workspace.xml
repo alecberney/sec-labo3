@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/keys/.rnd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keys/rsa_private_pkcs8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/access_control.conf" beforeDir="false" afterPath="$PROJECT_DIR$/access_control.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/access_control.csv" beforeDir="false" afterPath="$PROJECT_DIR$/access_control.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.ron" beforeDir="false" afterPath="$PROJECT_DIR$/db.ron" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/access_control.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/access_control.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
