@@ -16,6 +16,7 @@ use crate::action::Action;
 use crate::user_connected::ConnectedUser;
 //use crate::action::{Action, ConnectedUser};
 use crate::user::UserRole;
+use crate::database::Database;
 use connection::Connection;
 use lazy_static::lazy_static;
 use native_tls::{Identity, Protocol, TlsAcceptor};
@@ -31,8 +32,8 @@ use log::{debug, info, trace, warn};
 
 const SERVER_IP: &str = "localhost:4444";
 //const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
-const KEY_PATH: &str = "../keys/rsa_private.pem";
-const CERT_PATH: &str = "../keys/rsa_cert.pem";
+const KEY_PATH: &str = "./keys/rsa_private.pem";
+const CERT_PATH: &str = "./keys/rsa_cert.pem";
 
 lazy_static! {
     static ref MOTIVATIONAL_QUOTES: Vec<&'static str> = vec![
@@ -108,6 +109,9 @@ fn main() {
         TerminalMode::Stderr,
         ColorChoice::Auto
     ).unwrap();
+
+    // Init DB
+    Database::default(); // Added by me
 
     // Start TLS server and wait for new connections
     let acceptor = tls_config(CERT_PATH, KEY_PATH);

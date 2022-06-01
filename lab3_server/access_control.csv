@@ -1,6 +1,7 @@
-g, anonymous
-g, normal
-g, hr
+g, anonymous, anonymous
+g, normal, normal
+g, hr, hr
+g, hr, normal
 
 g2, show_users, all
 g2, change_own_phone, logged

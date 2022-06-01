@@ -1,16 +1,4 @@
 (
     data: {
-        "default_user": (
-            username: "default_user",
-            password: "default_pass",
-            phone_number: "0784539872",
-            role: StandardUser,
-        ),
-        "default_hr": (
-            username: "default_hr",
-            password: "default_pass",
-            phone_number: "0793175289",
-            role: HR,
-        ),
     },
 )

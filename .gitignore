@@ -16,6 +16,7 @@ Cargo.lock
 # Keys
 *.pem
 /keys
+/keys*
 
 # .idea
 lab3_server/.idea/*

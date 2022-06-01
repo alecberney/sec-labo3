@@ -11,8 +11,8 @@ use crate::{Action, ConnectedUser, UserRole};
 // authenticated users: |     x    |        x       |            |        |     |   x  |  x |
 // HR users:            |     x    |        x       |      x     |    x   |     |   x  |  x |
 
-const ACCESS_CONTROL_CONF_FILE: &str = "../access_control.conf";
-const ACCESS_CONTROL_CSV_FILE: &str = "../access_control.csv";
+const ACCESS_CONTROL_CONF_FILE: &str = "./access_control.conf";
+const ACCESS_CONTROL_CSV_FILE: &str = "./access_control.csv";
 
 #[tokio::main]
 pub async fn can_perform_action(action: Action, user: &mut ConnectedUser) -> Result<bool, Box<dyn Error>> {

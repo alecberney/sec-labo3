@@ -145,7 +145,7 @@ impl Action {
                 Ok(())
             }
         } else {
-            warn!("User {} tried to change phone number of user: {}", u.username() ,username);
+            warn!("A user tried to change phone number of user: {}", username);
             Err(PERMISSION_DENIED)
         };
 
@@ -207,7 +207,7 @@ impl Action {
                 Ok(Database::insert(&user)?)
             }
         } else {
-            warn!("User {} tried to add user {}", u.username(), username);
+            warn!("A user tried to add user {}", username);
             Err(PERMISSION_DENIED)
         };
 
