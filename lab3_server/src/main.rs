@@ -110,7 +110,7 @@ fn main() {
         ColorChoice::Auto
     ).unwrap();
 
-    // To add default account in DB
+    // Add default account in DB if file is not present
     Database::init();
 
     // Start TLS server and wait for new connections

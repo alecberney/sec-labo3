@@ -12,11 +12,9 @@ use crate::connection::Connection;
 type EmptyResult = Result<(), String>;
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
-struct UserAccount {
+pub struct UserAccountPublic {
     username: String,
-    password: String,
     phone_number: String,
-    role: UserRole,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Display, EnumString, EnumIter)]
@@ -68,7 +66,7 @@ impl Action {
     }
 
     pub fn show_users(connection: &mut Connection) -> Result<(), Box<dyn Error>> {
-        let res: Result<Vec<UserAccount>, String> = connection.receive()?;
+        let res: Result<Vec<UserAccountPublic>, String> = connection.receive()?;
         match res {
             Ok(users) => {
                 for u in users {

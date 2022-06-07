@@ -18,6 +18,12 @@ pub struct UserAccount {
     role: UserRole,
 }
 
+#[derive(Serialize, Deserialize, Clone, Debug)]
+pub struct UserAccountPublic {
+    pub username: String,
+    pub phone_number: String,
+}
+
 impl UserAccount {
     pub fn new(username: String, hash_password: String, salt: [u8;16], phone_number: String, role: UserRole) -> Self {
         Self {
@@ -43,6 +49,10 @@ impl UserAccount {
 
     pub fn role(&self) -> &UserRole {
         &self.role
+    }
+
+    pub fn phone_number(&self) -> &str {
+        &self.phone_number
     }
 
     pub fn set_phone_number(&mut self, phone_number: String) {

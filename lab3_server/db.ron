@@ -1,4 +1,18 @@
 (
     data: {
+        "default_hr": (
+            username: "default_hr",
+            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$p04LACCkwJ98cDFk3WGIZQ$P32v6aszfhE9ORf4jutQC9uaA15Z/B/8I5nTnZsmKR8",
+            salt: (167, 78, 11, 0, 32, 164, 192, 159, 124, 112, 49, 100, 221, 97, 136, 101),
+            phone_number: "0793175289",
+            role: HR,
+        ),
+        "default_user": (
+            username: "default_user",
+            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$p04LACCkwJ98cDFk3WGIZQ$P32v6aszfhE9ORf4jutQC9uaA15Z/B/8I5nTnZsmKR8",
+            salt: (167, 78, 11, 0, 32, 164, 192, 159, 124, 112, 49, 100, 221, 97, 136, 101),
+            phone_number: "0784539872",
+            role: StandardUser,
+        ),
     },
 )

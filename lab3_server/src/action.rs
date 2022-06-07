@@ -5,7 +5,7 @@
 ///             - Log stuff whenever required
 ///             - Potential improvements
 use crate::database::Database;
-use crate::user::{UserAccount, UserRole};
+use crate::user::{UserAccount, UserAccountPublic, UserRole};
 //use crate::Connection;
 use crate::user_connected::ConnectedUser;
 use crate::messages::*;
@@ -66,7 +66,14 @@ impl Action {
 
         // TODO add check permissions
         let users = Database::values()?;
-        let res: Result<Vec<UserAccount>, &str> = Ok(users);
+        let mut users_public: Vec<UserAccountPublic> = vec![];
+        for user in users {
+            users_public.push(UserAccountPublic {
+                username: user.username().to_string(),
+                phone_number: user.phone_number().to_string()
+            });
+        }
+        let res: Result<Vec<UserAccountPublic>, &str> = Ok(users_public);
         u.conn().send(&res)
     }
 
