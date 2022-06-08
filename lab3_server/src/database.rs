@@ -10,7 +10,7 @@ use rustbreak::{deser::Ron, FileDatabase};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::error::Error;
-use log::info;
+use log::{error, info};
 
 lazy_static! {
     static ref DB: FileDatabase<Database, Ron> =
@@ -56,7 +56,10 @@ impl Default for Database {
         // Reads env file
         let config = match read_env_file() {
             Ok(config) => config,
-            Err(e) => panic!("An error occurred reading env file: {}", e)
+            Err(e) => {
+                error!("An error occurred reading env file: {}", e);
+                panic!("An error occurred reading env file: {}", e)
+            }
         };
 
         let (default_salt_user, default_hash_pwd_user)

@@ -29,12 +29,7 @@ use std::net::TcpListener;
 use std::sync::Arc;
 use std::thread;
 use simplelog::{ColorChoice, Config, LevelFilter, TerminalMode, TermLogger};
-use log::{info, trace, warn};
-
-//const SERVER_IP: &str = "localhost:4444";
-//const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
-//const KEY_PATH: &str = "./keys/rsa_private.pem";
-//const CERT_PATH: &str = "./keys/rsa_cert.pem";
+use log::{error, info, trace, warn};
 
 lazy_static! {
     static ref MOTIVATIONAL_QUOTES: Vec<&'static str> = vec![
@@ -93,6 +88,7 @@ fn load_server_identity(cert_file: &str, key_file: &str) -> Identity {
 fn tls_config(cert_file: &str, key_file: &str) -> Arc<TlsAcceptor> {
     let identity = load_server_identity(cert_file, key_file);
 
+    // No log cause the server crashes if it doesn't work
     let acceptor = TlsAcceptor::builder(identity)
         .min_protocol_version(None)
         .max_protocol_version(Some(Protocol::Tlsv10))
@@ -105,7 +101,7 @@ fn tls_config(cert_file: &str, key_file: &str) -> Arc<TlsAcceptor> {
 fn main() {
     // Initialize logging policy
     TermLogger::init(
-        LevelFilter::Info, //Warn
+        LevelFilter::Warn,
         Config::default(),
         TerminalMode::Stderr,
         ColorChoice::Auto
@@ -117,7 +113,10 @@ fn main() {
     // Get config infos from env file
     let config = match read_env_file() {
         Ok(config) => config,
-        Err(e) => panic!("An error occurred reading env file: {}", e)
+        Err(e) => {
+            error!("An error occurred reading env file: {}", e);
+            panic!("An error occurred reading env file: {}", e)
+        }
     };
 
     // Start TLS server and wait for new connections

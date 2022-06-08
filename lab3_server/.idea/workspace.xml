@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../input_validation/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../input_validation/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../input_validation/src/username.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_client/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/src/action.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_client/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.ron" beforeDir="false" afterPath="$PROJECT_DIR$/db.ron" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/access_control.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/access_control.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/action.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/env_reader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/env_reader.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$c-labo3-report-berney-alec.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$c-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../~$c-labo3-report-berney-alec.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +106,7 @@
       <workItem from="1654598498258" duration="1239000" />
       <workItem from="1654671860367" duration="2260000" />
       <workItem from="1654674538695" duration="256000" />
-      <workItem from="1654674813171" duration="6560000" />
+      <workItem from="1654674813171" duration="7153000" />
     </task>
     <servers />
   </component>
