@@ -1,12 +1,11 @@
 /// This file is used to execute the various actions submitted by the clients
 ///
-/// Tasks todo: - Improve the authentication & access controls -> done
-///             - Input/output validation -> input done
-///             - Log stuff whenever required
-///             - Potential improvements
+/// Tasks: - Improve the authentication & access controls
+///        - Input/output validation
+///        - Log stuff whenever required
+///        - Potential improvements
 use crate::database::Database;
 use crate::user::{UserAccount, UserAccountPublic, UserRole};
-//use crate::Connection;
 use crate::user_connected::ConnectedUser;
 use crate::messages::*;
 use crate::hashing_tools::*;
@@ -64,21 +63,31 @@ impl Action {
     pub fn show_users(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         trace!("Show users");
 
-        // TODO add check permissions
-        let users = Database::values()?;
-        let mut users_public: Vec<UserAccountPublic> = vec![];
-        for user in users {
-            users_public.push(UserAccountPublic {
-                username: user.username().to_string(),
-                phone_number: user.phone_number().to_string()
-            });
-        }
-        let res: Result<Vec<UserAccountPublic>, &str> = Ok(users_public);
+        // Check permissions
+        let res = if can_perform_action(Action::ShowUsers, u)? {
+            // Update phone number
+            let users = Database::values()?;
+            let mut users_public: Vec<UserAccountPublic> = vec![];
+            for user in users {
+                users_public.push(UserAccountPublic {
+                    username: user.username().to_string(),
+                    phone_number: user.phone_number().to_string()
+                });
+            }
+            Ok(users_public)
+        } else {
+            warn!("Someone tried to see users");
+            Err(PERMISSION_DENIED)
+        };
+
+        //let res: Result<Vec<UserAccountPublic>, &str> = Ok(users_public);
         u.conn().send(&res)
     }
 
     pub fn change_own_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         trace!("Change own phone number");
+
+        // TODO: ask to reauthenticate
 
         let phone = u.conn().receive::<String>()?;
 
@@ -104,20 +113,13 @@ impl Action {
             Err(PERMISSION_DENIED)
         };
 
-        /*res = if u.is_anonymous() {
-            Err(ANONYMOUS_PHONE)
-        } else {
-            let mut user = u.user_account()?;
-            user.set_phone_number(phone);
-            Database::insert(&user)?;
-            Ok(())
-        };*/
-
         u.conn().send(&res)
     }
 
     pub fn change_phone(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         trace!("Change phone number");
+
+        // TODO: ask to reauthenticate
 
         // Receive data
         let username = u.conn().receive::<String>()?;
@@ -156,24 +158,13 @@ impl Action {
             Err(PERMISSION_DENIED)
         };
 
-        /*res = if u.is_anonymous() {
-            Err(ANONYMOUS_PHONE)
-        } else if let UserRole::StandardUser = u.user_account()?.role() {
-            Err(STANDARD_OTHER_PHONE)
-        } else if target_user.is_none() {
-            Err(USER_NOT_FOUND)
-        } else {
-            let mut target_user = target_user.unwrap();
-            target_user.set_phone_number(phone);
-            Database::insert(&target_user)?;
-            Ok(())
-        };*/
-
         u.conn().send(&res)
     }
 
     pub fn add_user(u: &mut ConnectedUser) -> Result<(), Box<dyn Error>> {
         trace!("Adding user");
+
+        // TODO: ask to reauthenticate
 
         // Receive data
         let username = u.conn().receive::<String>()?;
@@ -199,6 +190,8 @@ impl Action {
             warn!("Invalid phone number: {}", phone);
             return u.conn().send(&res);
         }
+        // Role is validated and can't be false
+        // because connection receive will return and throw an error before.
 
         // Hash password with a random salt
         let (salt, hash_password) = new_hash_password(&password);
@@ -217,20 +210,6 @@ impl Action {
             warn!("A user tried to add user {}", username);
             Err(PERMISSION_DENIED)
         };
-
-        // Check permissions
-        /*res = if u.is_anonymous() {
-            Err(ANONYMOUS_ADD_USER)
-        } else if let UserRole::HR = u.user_account()?.role() {
-            if Database::get(&username)?.is_some() {
-                Err(USER_EXISTS)
-            } else {
-                let user = UserAccount::new(username, hash_password, salt, phone, role);
-                Ok(Database::insert(&user)?)
-            }
-        } else {
-            Err(ONLY_HR_ADD_USER)
-        };*/
 
         u.conn.send(&res)
     }
@@ -260,6 +239,7 @@ impl Action {
         res = if can_perform_action(Action::Login, u)? {
             let user = Database::get(&username)?;
             if let Some(user) = user {
+                // TODO: faire le hash de toute façon
                 // Compare hash of passwords
                 if user.hash_password() == &hash_argon2(&password, user.salt()) {
                     u.set_username(&username);
@@ -267,34 +247,16 @@ impl Action {
                     Ok(())
                 } else {
                     warn!("Invalid password for user {}", username);
-                    Err(INVALID_PASSWORD)
+                    Err(LOGIN_FAIL)
                 }
             } else {
                 warn!("User not found: {}", username);
-                Err(USER_DOES_NOT_EXIST)
+                Err(LOGIN_FAIL)
             }
         } else {
             warn!("User {} tried to login", u.username());
             Err(PERMISSION_DENIED)
         };
-
-        // Check permissions
-        /*res = if !u.is_anonymous() {
-            Err(ALREADY_LOGGED_IN)
-        } else {
-            let user = Database::get(&username)?;
-            if let Some(user) = user {
-                // Compare hash of passwords
-                if user.hash_password() == &hash_argon2(&password, user.salt()) {
-                    u.set_username(&username);
-                    Ok(())
-                } else {
-                    Err(INVALID_PASSWORD)
-                }
-            } else {
-                Err(USER_DOES_NOT_EXIST)
-            }
-        };*/
 
         u.conn.send(&res)
     }
@@ -313,14 +275,6 @@ impl Action {
             warn!("Anonymous tried to logout");
             Err(PERMISSION_DENIED)
         };
-
-        // Check permissions
-        /*res = if u.is_anonymous() {
-            Err(NOT_LOGGED_IN)
-        } else {
-            u.logout();
-            Ok(())
-        };*/
 
         u.conn.send(&res)
     }

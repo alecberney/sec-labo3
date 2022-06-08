@@ -1,7 +1,7 @@
 /// This file is used to store and retrieve user accounts from the database
 ///
-/// Tasks todo: - Log stuff whenever required
-///             - Potential improvements
+/// Tasks: - Log stuff whenever required
+///        - Potential improvements
 use crate::user::{UserAccount, UserRole};
 use crate::hashing_tools::new_hash_password;
 use lazy_static::lazy_static;

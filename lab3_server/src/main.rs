@@ -1,8 +1,8 @@
 /// This file is used to configure and start the TLS server.
 /// On new connections, the `handle_client` function is called in a thread
 ///
-/// Tasks todo: - Configure the TLS server properly.
-///             - Log stuff whenever required
+/// Tasks: - Configure the TLS server properly.
+///        - Log stuff whenever required
 mod action;
 mod connection;
 mod database;
@@ -11,6 +11,7 @@ mod hashing_tools;
 mod messages;
 mod access_control;
 mod user_connected;
+mod env_reader;
 
 use crate::action::Action;
 use crate::user_connected::ConnectedUser;
@@ -121,30 +122,26 @@ fn main() {
 
     // Handles new connection, negotiate TLS and call handle_client
     for stream in listener.incoming() {
-        trace!("New connection");
+        info!("New connection");
         match stream {
             Ok(stream) => {
                 let acceptor = acceptor.clone();
                 thread::spawn(move || {
-                    debug!("tls handshake");
+                    trace!("TLS handshake");
                     // TLS handshake on top of the connection using the TlsAcceptor
                     let stream = acceptor.accept(stream);
                     if stream.is_err() {
-                        //println!("TLS handshake failed with error: {}", stream.err().unwrap());
                         warn!("TLS handshake failed with error: {}", stream.err().unwrap());
                     } else {
-                        //println!("TLS client connection accepted");
                         info!("TLS client connection accepted");
-                        if let Err(e) = handle_client(Connection::new(stream.unwrap())) {
-                            //eprintln!("Connection closed: {}", e);
-                            warn!("Connection closed: {}", e);
+                        if let Err(e) = handle_client(Connection::new(stream.unwrap())) { ;
+                            info!("Connection closed: {}", e);
                             return;
                         }
                     }
                 });
             }
             Err(e) => {
-                //println!("Connection failed with error: {}", e);
                 warn!("Connection failed with error: {}", e);
             }
         }
