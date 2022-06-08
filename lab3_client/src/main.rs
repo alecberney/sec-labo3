@@ -1,7 +1,7 @@
 /// This file is used to configure and start a TLS connection to the server.
 /// On new connections, the `client` function is called.
 ///
-/// Tasks todo: - Configure the TLS client properly.
+/// Tasks: - Configure the TLS client properly.
 
 mod connection;
 mod action;

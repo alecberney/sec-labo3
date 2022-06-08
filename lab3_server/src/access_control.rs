@@ -19,15 +19,17 @@ pub async fn can_perform_action(action: Action, user: &mut ConnectedUser) -> Res
     let mut e = Enforcer::new(
         ACCESS_CONTROL_CONF_FILE,
         ACCESS_CONTROL_CSV_FILE).await?;
-        //.expect("cannot read model or policy");
     e.enable_log(true);
 
     match e.enforce((
         get_user_role_string(user)?,
-        get_action_string(action),
+        get_action_string(&action),
     )) {
         Ok(true) => Ok(true),
-        Ok(false) => Ok(false),
+        Ok(false) => {
+            warn!("A user tried to access control an unauthorized ressource {:?}", action);
+            Ok(false)
+        },
         Err(_) => {
             warn!("Access control error");
             Err("Error while checking access control".into())
@@ -35,7 +37,7 @@ pub async fn can_perform_action(action: Action, user: &mut ConnectedUser) -> Res
     }
 }
 
-fn get_action_string(action: Action) -> &'static str {
+fn get_action_string(action: &Action) -> &'static str {
     match action {
         Action::ShowUsers => "show_users",
         Action::ChangeOwnPhone => "change_own_phone",

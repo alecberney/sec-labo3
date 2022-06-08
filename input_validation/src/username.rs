@@ -2,10 +2,10 @@ use lazy_static::lazy_static;
 use regex::Regex;
 
 static REGEX_ALPHABETIC: &str = r"[[:alpha:]]+";
-static REGEX_USERNAME: &str = r"[[:alnum:]]{4,64}";
+static REGEX_USERNAME: &str = r"[[[:alnum:]]-_]{4,64}";
 
 /// Validate a username
-/// Accept only characters alphanumeric
+/// Accept only characters alphanumeric and - _
 /// Must contain 1 alphabetic character
 /// Min length: 4
 /// Max length: 64
@@ -55,6 +55,9 @@ mod tests {
         assert!(validate_username("test1234"));
         assert!(validate_username("TEST1234"));
         assert!(validate_username("TEst1234"));
+        assert!(validate_username("TEst-234"));
+        assert!(validate_username("TEst_234"));
+        assert!(validate_username("TEst-2_4"));
 
         // Corner cases & Fail
         assert!(!validate_username("12345678"));

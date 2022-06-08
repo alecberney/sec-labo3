@@ -9,35 +9,65 @@ use std::error::Error;
 //KEY_PATH=
 //CERT_PATH=
 //DEFAULT_USER=
+//DEFAULT_USER_PASSWORD=
+//DEFAULT_USER_PHONE=
 //DEFAULT_HR=
-//DEFAULT_PASSWORD=d
+//DEFAULT_HR_PASSWORD=
+//DEFAULT_HR_PHONE=
 
-/*let mut smtp_user;
-let mut smtp_pass;
-let mut smtp_serv;
-let mut mail_from;
+pub struct Config {
+    pub server_ip: String,
+    pub key_path: String,
+    pub certificate_path: String,
+    pub default_user: String,
+    pub default_user_password: String,
+    pub default_user_phone: String,
+    pub default_hr: String,
+    pub default_hr_password: String,
+    pub default_hr_phone: String,
+}
 
-fn read_env_file() -> Result<(String, String, String, String), Box<dyn Error>> {
-    let envfile = EnvFile::new(&Path::new("./.env"))?;
+pub fn read_env_file() -> Result<Config, Box<dyn Error>> {
+    let envfile = EnvFile::new(&Path::new(".env"))?;
 
-    let mut smtp_user= String::from("");
-    let mut smtp_pass= String::from("");
-    let mut smtp_serv= String::from("");
-    let mut mail_from= String::from("");
+    let mut config = Config {
+        server_ip: "".to_string(),
+        key_path: "".to_string(),
+        certificate_path: "".to_string(),
+        default_user: "".to_string(),
+        default_user_password: "".to_string(),
+        default_user_phone: "".to_string(),
+        default_hr: "".to_string(),
+        default_hr_password: "".to_string(),
+        default_hr_phone: "".to_string()
+    };
 
     for (key, value) in envfile.store {
         match &*key {
-            "SMTP_USER" => smtp_user = format!("{}", value),
-            "SMTP_PASS" => smtp_pass = format!("{}", value),
-            "SMTP_SERV" => smtp_serv = format!("{}", value),
-            "MAIL_FROM" => mail_from = format!("{}", value),
+            "SERVER_IP" => config.server_ip = format!("{}", value),
+            "KEY_PATH" => config.key_path = format!("{}", value),
+            "CERT_PATH" => config.certificate_path = format!("{}", value),
+            "DEFAULT_USER" => config.default_user = format!("{}", value),
+            "DEFAULT_USER_PASSWORD" => config.default_user_password = format!("{}", value),
+            "DEFAULT_USER_PHONE" => config.default_user_phone = format!("{}", value),
+            "DEFAULT_HR" => config.default_hr = format!("{}", value),
+            "DEFAULT_HR_PASSWORD" => config.default_hr_password = format!("{}", value),
+            "DEFAULT_HR_PHONE" => config.default_hr_phone = format!("{}", value),
             _ => {}
         }
     }
 
-    if smtp_user == "" || smtp_pass == "" || smtp_serv == "" || mail_from == "" {
-        Err("INVALID ENV FILE".into())
+    if config.server_ip == ""
+        || config.key_path == ""
+        || config.certificate_path == ""
+        || config.default_user == ""
+        || config.default_user_password == ""
+        || config.default_user_phone == ""
+        || config.default_hr == ""
+        || config.default_hr_password == ""
+        || config.default_hr_phone == "" {
+        Err("Invalid env file".into())
     } else {
-        Ok((smtp_user, smtp_pass, smtp_serv, mail_from))
+        Ok(config)
     }
-}*/
+}

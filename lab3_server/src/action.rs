@@ -268,8 +268,8 @@ impl Action {
 
         res = if can_perform_action(Action::Logout, u)? {
             // Logout
-            u.logout();
             info!("User {} logged out", u.username());
+            u.logout();
             Ok(())
         } else {
             warn!("Anonymous tried to logout");

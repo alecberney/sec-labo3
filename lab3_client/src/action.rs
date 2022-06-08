@@ -1,6 +1,6 @@
 /// This file is used to execute the various actions sent to the server
 ///
-/// Tasks todo: - Some client-side input/output validation
+/// Tasks: todo Some client-side input/output validation
 use std::error::Error;
 use serde::{Deserialize, Serialize};
 use strum::IntoEnumIterator;

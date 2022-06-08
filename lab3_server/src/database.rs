@@ -4,6 +4,7 @@
 ///        - Potential improvements
 use crate::user::{UserAccount, UserRole};
 use crate::hashing_tools::new_hash_password;
+use crate::env_reader::read_env_file;
 use lazy_static::lazy_static;
 use rustbreak::{deser::Ron, FileDatabase};
 use serde::{Deserialize, Serialize};
@@ -52,29 +53,35 @@ impl Default for Database {
 
         info!("Creating starting data for database");
 
-        // TODO: secret in env file
-        let (default_salt1, default_hash_pwd1) = new_hash_password("default_pass");
-        let default_salt2 = default_salt1.clone();
-        let default_hash_pwd2 = default_hash_pwd1.clone();
+        // Reads env file
+        let config = match read_env_file() {
+            Ok(config) => config,
+            Err(e) => panic!("An error occurred reading env file: {}", e)
+        };
 
-        let u1 = UserAccount::new(
-            "default_user".to_string(),
-            default_hash_pwd1,
-            default_salt1,
-            "0784539872".to_string(),
+        let (default_salt_user, default_hash_pwd_user)
+            = new_hash_password(&config.default_user_password);
+        let (default_salt_hr, default_hash_pwd_hr)
+            = new_hash_password(&config.default_hr_password);
+
+        let user = UserAccount::new(
+            config.default_user,
+            default_hash_pwd_user,
+            default_salt_user,
+            config.default_user_phone,
             UserRole::StandardUser,
         );
 
-        let u2 = UserAccount::new(
-            "default_hr".to_string(),
-            default_hash_pwd2,
-            default_salt2,
-            "0793175289".to_string(),
+        let hr = UserAccount::new(
+            config.default_hr,
+            default_hash_pwd_hr,
+            default_salt_hr,
+            config.default_hr_phone,
             UserRole::HR,
         );
 
-        db.data.insert(u1.username().to_string(), u1);
-        db.data.insert(u2.username().to_string(), u2);
+        db.data.insert(user.username().to_string(), user);
+        db.data.insert(hr.username().to_string(), hr);
 
         db
     }

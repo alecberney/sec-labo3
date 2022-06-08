@@ -26,3 +26,7 @@ lab3_server/.idea/
 
 # Other files
 lab3_server/old*
+
+# .env
+lab3_server/.env
+~$c-labo3-report-berney-alec.docx

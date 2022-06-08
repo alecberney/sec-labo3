@@ -17,6 +17,7 @@ use crate::action::Action;
 use crate::user_connected::ConnectedUser;
 use crate::user::UserRole;
 use crate::database::Database;
+use crate::env_reader::read_env_file;
 use connection::Connection;
 use lazy_static::lazy_static;
 use native_tls::{Identity, Protocol, TlsAcceptor};
@@ -28,13 +29,12 @@ use std::net::TcpListener;
 use std::sync::Arc;
 use std::thread;
 use simplelog::{ColorChoice, Config, LevelFilter, TerminalMode, TermLogger};
-use log::{debug, info, trace, warn};
+use log::{info, trace, warn};
 
-// TODO: secret in env file
-const SERVER_IP: &str = "localhost:4444";
+//const SERVER_IP: &str = "localhost:4444";
 //const KEY_PATH: &str = "../keys/rsa_private_pkcs8";
-const KEY_PATH: &str = "./keys/rsa_private.pem";
-const CERT_PATH: &str = "./keys/rsa_cert.pem";
+//const KEY_PATH: &str = "./keys/rsa_private.pem";
+//const CERT_PATH: &str = "./keys/rsa_cert.pem";
 
 lazy_static! {
     static ref MOTIVATIONAL_QUOTES: Vec<&'static str> = vec![
@@ -105,7 +105,7 @@ fn tls_config(cert_file: &str, key_file: &str) -> Arc<TlsAcceptor> {
 fn main() {
     // Initialize logging policy
     TermLogger::init(
-        LevelFilter::Trace, //Warn
+        LevelFilter::Info, //Warn
         Config::default(),
         TerminalMode::Stderr,
         ColorChoice::Auto
@@ -114,9 +114,15 @@ fn main() {
     // Add default account in DB if file is not present
     Database::init();
 
+    // Get config infos from env file
+    let config = match read_env_file() {
+        Ok(config) => config,
+        Err(e) => panic!("An error occurred reading env file: {}", e)
+    };
+
     // Start TLS server and wait for new connections
-    let acceptor = tls_config(CERT_PATH, KEY_PATH);
-    let listener = TcpListener::bind(SERVER_IP).unwrap();
+    let acceptor = tls_config(&config.certificate_path, &config.key_path);
+    let listener = TcpListener::bind(config.server_ip).unwrap();
     //println!("Server started");
     info!("Server started");
 
@@ -134,7 +140,7 @@ fn main() {
                         warn!("TLS handshake failed with error: {}", stream.err().unwrap());
                     } else {
                         info!("TLS client connection accepted");
-                        if let Err(e) = handle_client(Connection::new(stream.unwrap())) { ;
+                        if let Err(e) = handle_client(Connection::new(stream.unwrap())) {
                             info!("Connection closed: {}", e);
                             return;
                         }

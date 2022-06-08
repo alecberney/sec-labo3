@@ -2,16 +2,16 @@
     data: {
         "default_hr": (
             username: "default_hr",
-            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$p04LACCkwJ98cDFk3WGIZQ$P32v6aszfhE9ORf4jutQC9uaA15Z/B/8I5nTnZsmKR8",
-            salt: (167, 78, 11, 0, 32, 164, 192, 159, 124, 112, 49, 100, 221, 97, 136, 101),
+            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$MouVyXjgY+obgTbHjhaJHg$0aYQixCZPJGbFJjXcKaO5JZMFnTAsimEHrRNjplizmw",
+            salt: (50, 139, 149, 201, 120, 224, 99, 234, 27, 129, 54, 199, 142, 22, 137, 30),
             phone_number: "0793175289",
             role: HR,
         ),
         "default_user": (
             username: "default_user",
-            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$p04LACCkwJ98cDFk3WGIZQ$P32v6aszfhE9ORf4jutQC9uaA15Z/B/8I5nTnZsmKR8",
-            salt: (167, 78, 11, 0, 32, 164, 192, 159, 124, 112, 49, 100, 221, 97, 136, 101),
-            phone_number: "0784539872",
+            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$D98ti+HfWz6In/unaSbmhQ$Qvx1lGTbB9axTavmNJjjlhydVI7VRjNEq6v/MR7mEfg",
+            salt: (15, 223, 45, 139, 225, 223, 91, 62, 136, 159, 251, 167, 105, 38, 230, 133),
+            phone_number: "0788377718",
             role: StandardUser,
         ),
     },

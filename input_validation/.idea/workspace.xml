@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaf2673d-1f3c-4d35-b98e-a43326551fb2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/username.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/action.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_server/src/database.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/database.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_server/src/hashing_tools.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/hashing_tools.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_server/src/messages.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/messages.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_server/src/user.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/user.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.cargo.check&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cargo.Test username::tests::validate_username_length">
+  <component name="RunManager" selected="Cargo.Test username::tests">
     <configuration name="Test password::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package input_validation --lib password::tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -68,6 +67,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -84,6 +84,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -100,6 +101,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -116,6 +118,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -132,6 +135,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -142,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Test username::tests::validate_username_length" />
         <item itemvalue="Cargo.Test username::tests" />
+        <item itemvalue="Cargo.Test username::tests::validate_username_length" />
         <item itemvalue="Cargo.Test password::tests" />
         <item itemvalue="Cargo.Test phone_number::tests" />
         <item itemvalue="Cargo.Test phone_number::tests::validate_phone_number_test" />
@@ -167,6 +171,7 @@
       <workItem from="1653977687133" duration="2558000" />
       <workItem from="1653980357891" duration="49000" />
       <workItem from="1653990210978" duration="13000" />
+      <workItem from="1654674101947" duration="274000" />
     </task>
     <servers />
   </component>
