@@ -5,6 +5,7 @@
 
 mod connection;
 mod action;
+mod input_handlers;
 
 use std::error::Error;
 use std::fs::File;

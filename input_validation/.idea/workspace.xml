@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaf2673d-1f3c-4d35-b98e-a43326551fb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/messages.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3_client/src/input_handlers.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/username.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/username.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_client/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_client/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/src/action.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_client/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3_server/src/action.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/action.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_server/src/messages.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_server/src/messages.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +177,9 @@
       <workItem from="1653980357891" duration="49000" />
       <workItem from="1653990210978" duration="13000" />
       <workItem from="1654674101947" duration="274000" />
+      <workItem from="1654691283834" duration="30000" />
+      <workItem from="1654692018263" duration="227000" />
+      <workItem from="1654692265693" duration="83000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 /// This file is used to execute the various actions sent to the server
 ///
-/// Tasks: todo Some client-side input/output validation
+/// Tasks: Some client-side input/output validation
 use std::error::Error;
 use serde::{Deserialize, Serialize};
 use strum::IntoEnumIterator;
@@ -8,6 +8,7 @@ use strum_macros::{EnumIter, EnumString, Display};
 use read_input::prelude::*;
 
 use crate::connection::Connection;
+use crate::input_handlers::*;
 
 type EmptyResult = Result<(), String>;
 
@@ -80,7 +81,7 @@ impl Action {
     }
 
     pub fn change_own_phone(connection: &mut Connection) -> Result<(), Box<dyn Error>> {
-        let phone_number = input::<String>().msg("Please enter your new phone number: ").get();
+        let phone_number = ask_phone_number();
         connection.send(&phone_number)?;
 
         let res = connection.receive::<EmptyResult>()?;
@@ -92,8 +93,8 @@ impl Action {
     }
 
     pub fn change_phone(connection: &mut Connection) -> Result<(), Box<dyn Error>> {
-        let username = input::<String>().msg("Please enter the username: ").get();
-        let phone_number = input::<String>().msg("Please enter the new phone number: ").get();
+        let username = ask_username();
+        let phone_number = ask_phone_number();
         connection.send(&username)?;
         connection.send(&phone_number)?;
 
@@ -106,9 +107,9 @@ impl Action {
     }
 
     pub fn add_user(connection: &mut Connection) -> Result<(), Box<dyn Error>> {
-        let username = input::<String>().msg("Please enter the username: ").get();
-        let password = input::<String>().msg("Please enter the password: ").get();
-        let phone_number = input::<String>().msg("Please enter the phone number: ").get();
+        let username = ask_username();
+        let password = ask_password();
+        let phone_number = ask_phone_number();
         let role = input::<UserRole>().msg("Please enter the role (HR/StandardUser): ").get();
         connection.send(&username)?;
         connection.send(&password)?;
@@ -124,8 +125,8 @@ impl Action {
     }
 
     pub fn login(connection: &mut Connection) -> Result<(), Box<dyn Error>> {
-        let username = input::<String>().msg("Please enter the username: ").get();
-        let password = input::<String>().msg("Please enter the password: ").get();
+        let username = ask_username();
+        let password = ask_password();
         connection.send(&username)?;
         connection.send(&password)?;
 
