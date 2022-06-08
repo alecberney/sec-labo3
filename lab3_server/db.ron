@@ -1,5 +1,12 @@
 (
     data: {
+        "test": (
+            username: "test",
+            hash_password: "$argon2i$v=19$m=4096,t=3,p=1$fktSBu7eCXf4l9c1MvcSbA$1OAoaG1gumP7/IyTlAu5kz2+OlFaZchCyIBX6xjXQ4g",
+            salt: (126, 75, 82, 6, 238, 222, 9, 119, 248, 151, 215, 53, 50, 247, 18, 108),
+            phone_number: "078 837 77 18",
+            role: HR,
+        ),
         "default_hr": (
             username: "default_hr",
             hash_password: "$argon2i$v=19$m=4096,t=3,p=1$MouVyXjgY+obgTbHjhaJHg$0aYQixCZPJGbFJjXcKaO5JZMFnTAsimEHrRNjplizmw",
@@ -11,7 +18,7 @@
             username: "default_user",
             hash_password: "$argon2i$v=19$m=4096,t=3,p=1$D98ti+HfWz6In/unaSbmhQ$Qvx1lGTbB9axTavmNJjjlhydVI7VRjNEq6v/MR7mEfg",
             salt: (15, 223, 45, 139, 225, 223, 91, 62, 136, 159, 251, 167, 105, 38, 230, 133),
-            phone_number: "0788377718",
+            phone_number: "076 666 55 44",
             role: StandardUser,
         ),
     },

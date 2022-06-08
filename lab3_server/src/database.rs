@@ -13,6 +13,7 @@ use std::error::Error;
 use log::{error, info};
 
 lazy_static! {
+    // No log cause the server crashes if it doesn't work
     static ref DB: FileDatabase<Database, Ron> =
         FileDatabase::load_from_path_or_default("db.ron").unwrap();
 }

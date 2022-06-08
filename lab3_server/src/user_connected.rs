@@ -38,6 +38,7 @@ impl ConnectedUser {
     }
 
     pub fn user_account(&mut self) -> Result<UserAccount, Box<dyn Error>> {
+        // No log cause the server crashes if it doesn't work
         Ok(Database::get(&self.username())?.expect("User logged in but not in DB"))
     }
 }
