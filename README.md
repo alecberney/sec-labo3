@@ -3,6 +3,24 @@
 ## Authors
 * Alec Berney
 
+## Usage
+
+To use this project, create an env file to the root of server folder. 
+The file must contain these informations for mail server:
+````
+SERVER_IP=
+KEY_PATH=
+CERT_PATH=
+DEFAULT_USER=
+DEFAULT_USER_PASSWORD=
+DEFAULT_USER_PHONE=
+DEFAULT_HR=
+DEFAULT_HR_PASSWORD=
+DEFAULT_HR_PHONE=
+````
+
+# Report
+
 ## Améliorations apportées
 Nous allons ici parcourir chaque amélioration apportée au programme et par thème.
 
