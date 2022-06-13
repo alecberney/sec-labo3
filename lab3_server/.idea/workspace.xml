@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53820724-4457-4271-ba42-591b04db07fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3_client/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_client/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$c-labo3-report-berney-alec.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../sec-labo3-report-berney-alec.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +112,10 @@
       <workItem from="1654674813171" duration="8415000" />
       <workItem from="1654692265762" duration="3746000" />
       <workItem from="1654696274511" duration="4583000" />
+      <workItem from="1654852552634" duration="54000" />
+      <workItem from="1655111922360" duration="336000" />
+      <workItem from="1655125284297" duration="336000" />
+      <workItem from="1655125951793" duration="1975000" />
     </task>
     <servers />
   </component>

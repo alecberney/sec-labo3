@@ -90,8 +90,8 @@ fn tls_config(cert_file: &str, key_file: &str) -> Arc<TlsAcceptor> {
 
     // No log cause the server crashes if it doesn't work
     let acceptor = TlsAcceptor::builder(identity)
-        .min_protocol_version(None)
-        .max_protocol_version(Some(Protocol::Tlsv10))
+        .min_protocol_version(Some(Protocol::Tlsv12))
+        .max_protocol_version(None)
         .build()
         .expect("Could not build TlsAcceptor");
 

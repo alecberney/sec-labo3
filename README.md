@@ -4,8 +4,24 @@
 * Alec Berney
 
 ## Améliorations apportées
-
 Nous allons ici parcourir chaque amélioration apportée au programme et par thème.
+
+## TLS
+Le client se connectait en TLS sans ajouter de certificat. \
+Il autorisait les noms d’hôtes (hostname) et certificats invalides pour se connecter. \
+Pour palier à ceci, j’ai ajouté le certificat au « builder » du « TLSConnector » à l’aide de la fonction « add_root_certificate » 
+et j’ai également refusé les certificats et nom d’hôtes invalides.
+
+
+Les versions du protocole TLS 1.0 et 1.1 étant dépréciée, il est également nécessaire de changer le « min_protocol_version » 
+à la valeur « Some(Protocol::Tlsv12) » et celle de « max_protocol_version » à la valeur « None » afin de supporter la dernière version du protocole.
+
+Ceci est indiqué dans les docs du « TLSConnectorBuilder » :
+https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html#method.min_protocol_version
+https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html#method.max_protocol_version
+
+Cette dernière manipulation a été réalisée dans le fichier « main » du serveur et du client.
+
 ### Base de données
 
 La base de données stockait le mot de passe des utilisateurs en clair, ce qui est HORRIBLE ! \

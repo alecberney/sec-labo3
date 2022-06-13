@@ -31,7 +31,6 @@ fn client(conn: &mut Connection) -> Result<(), Box<dyn Error>> {
 }
 
 // Load a PEM certificate
-#[allow(unused)]
 fn load_server_cert(cert_file: &str) -> Certificate {
     let mut cert = Vec::new();
     let mut cert_file = File::open(cert_file).unwrap();
@@ -42,14 +41,16 @@ fn load_server_cert(cert_file: &str) -> Certificate {
 
 const SERVER_HOST: &str = "localhost";
 const SERVER_PORT: &str = "4444";
+const SERVER_CERT_PATH: &str = "../lab3_server/keys/rsa_cert.pem";
 
 fn main() {
     let connector = TlsConnector::builder()
-        .min_protocol_version(None)
-        .max_protocol_version(Some(Protocol::Tlsv10))
+        .add_root_certificate(load_server_cert(SERVER_CERT_PATH))
+        .min_protocol_version(Some(Protocol::Tlsv12))
+        .max_protocol_version(None)
         .disable_built_in_roots(true)
-        .danger_accept_invalid_certs(true)
-        .danger_accept_invalid_hostnames(true)
+        .danger_accept_invalid_certs(false)
+        .danger_accept_invalid_hostnames(false)
         .build()
         .expect("Failed to build TlsConnector");
 
